@@ -11,7 +11,7 @@ import React from "react";
 import { CreateClass, JoinClass } from "..";
 import { useLocalContext } from "../../context/context";
 import { useStyles } from "./style";
-
+import "./sstyle.css"
 const Header = ({ children }) => {
   const classes = useStyles();
 
@@ -41,21 +41,12 @@ const Header = ({ children }) => {
       <AppBar className={classes.appBar} position="static">
         <Toolbar className={classes.toolbar}>
           <div className={classes.headerWrapper}>
-            {/* {children} */}
             <Typography variant="h6" className={classes.title}>
               The Elite Team
             </Typography>
-            {/* <img
-              src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg"
-              alt="Classroom"
-            />
-            <Typography variant="h6" className={classes.title}>
-              Classroom
-            </Typography> */}
           </div>
           <div className={classes.header__wrapper__right}>
             <Add onClick={handleClick} className={classes.icon} />
-            {/* <Apps className={classes.icon} /> */}
             <Menu
               id="simple-menu"
               anchorEl={anchorEl}
@@ -63,7 +54,7 @@ const Header = ({ children }) => {
               open={Boolean(anchorEl)}
               onClose={handleClose}
             >
-              <MenuItem onClick={handleJoin}>Join Class</MenuItem>
+              <MenuItem onClick={handleJoin} >Join Class</MenuItem>
               <MenuItem onClick={handleCreate}>Create Class</MenuItem>
             </Menu>
             <div>

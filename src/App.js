@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Drawer, JoinedClasses, Login, Main } from "./components";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { IsUserRedirect, ProtectedRoute } from "./routes/Routes";
+import { Grid } from "@material-ui/core";
 import { useLocalContext } from "./context/context";
 import db from "./lib/firebase";
 function App() {
@@ -63,13 +64,22 @@ function App() {
         <ProtectedRoute user={loggedInMail} path="/" exact>
           <Drawer />
           <ol className="joined">
+          <Grid container spacing = {2}>
             {createdClasses.map((item) => (
-              <JoinedClasses classData={item} />
-            ))}
+              <Grid item lg={3} md={3} sm={12} xs={12} >
+                <JoinedClasses classData={item} />
+              </Grid>
 
-            {joinedClasses.map((item) => (
-              <JoinedClasses classData={item} />
             ))}
+             </Grid>
+            <Grid container spacing = {2}>
+              {joinedClasses.map((item) => (
+                <Grid item lg={3} md={3} sm={12} xs={12} >
+                  <JoinedClasses classData={item} />
+                </Grid>
+              ))}
+            </Grid>
+
           </ol>
         </ProtectedRoute>
       </Switch>
