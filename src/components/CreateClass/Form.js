@@ -4,7 +4,7 @@ import { useLocalContext } from "../../context/context";
 import { v4 as uuidV4 } from "uuid";
 import db from "../../lib/firebase";
 
-const Form = () => {
+const Form = ({setShowForm}) => {
   const [className, setClassName] = useState("");
   const [Section, setSection] = useState("");
   const [Room, setRoom] = useState("");
@@ -30,6 +30,7 @@ const Form = () => {
       .then(() => {
         setCreateClassDialog(false);
       });
+         setShowForm(true)
   };
   return (
     <div className="form">

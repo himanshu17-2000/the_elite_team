@@ -3,6 +3,7 @@ import { Card, CardActions, CardMedia, CardContent, Typography, Button } from '@
 import { Link } from 'react-router-dom';
 import { Grid } from '@material-ui/core';
 import "./style.css";
+import { Announcement } from '@material-ui/icons';
 
 
 
@@ -27,6 +28,7 @@ const JoinedClasses = ({ classData }) => {
               <p className="joined__owner">{classData.owner}</p>
             </div>
           </CardContent>
+          
         </Card>
       </div>
   
