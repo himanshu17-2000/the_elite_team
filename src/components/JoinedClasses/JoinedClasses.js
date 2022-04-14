@@ -11,14 +11,15 @@ const JoinedClasses = ({ classData }) => {
     
       <div className='outer_card'>
 
-        <Card sx={{ maxWidth: 300 }}>
+        <Card sx={{ maxWidth: 300 }} className="externalcard">
           <CardMedia
             component="img"
             alt="green iguana"
-            height="250"
+            height="200"
+            blurRadius={1}
             image="http://source.unsplash.com/random/?book"
           />
-          <CardContent>
+          <CardContent className='title'>
             <div className="joined__content">
               <Link className="joined__title" to={`/${classData.id}`}>
                 <h2>{classData.className}</h2>

@@ -81,7 +81,7 @@ const JoinClass = () => {
               Join
             </Button>
           </div>
-          <div className="joinClass__form">
+          {/* <div className="joinClass__form">
             <p className="joinClass__formText">
               You're currently signed in as {loggedInUser?.email}
             </p>
@@ -101,7 +101,7 @@ const JoinClass = () => {
                 Logout
               </Button>
             </div>
-          </div>
+          </div> */}
           <div className="joinClass__form">
             <div
               style={{ fontSize: "1.25rem", color: "#3c4043" }}

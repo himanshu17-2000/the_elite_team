@@ -12,7 +12,7 @@
   overflow: hidden;
 }
 .main__wrapper1 {
-  height: 15rem;
+  height: 10rem;
   position: relative;
   width: 100%;
 }
@@ -30,15 +30,10 @@
   height: 100%;
   left: 0;
   opacity: 0.8;
-  position: absolute;
+  position: relative;
   top: 0;
   width: 100%;
   background-image: linear-gradient( 65.9deg,  rgba(85,228,224,1) 5.5%, rgba(75,68,224,0.74) 54.2%, rgba(64,198,238,1) 55.2%, rgba(177,36,224,1) 98.4% );
-  /* background-image: radial-gradient(
-    25rem 18.75rem ellipse at bottom right,
-    #4285f4,
-    transparent
-  ); */
 }
 .main__text {
   position: relative;
@@ -86,8 +81,8 @@
 .main__announcements {
   padding: 1rem;
   overflow: hidden;
-  margin: -2.4rem;
-  margin-left: 1rem;
+  /* margin: -2.4rem; */
+  /* margin-left:2px; */
   /* margin-top: 1.5rem; */
 }
 .main__subText {
