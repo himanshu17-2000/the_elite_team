@@ -31,10 +31,12 @@ export const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
+    
   },
   icon: {
     marginRight: "15px",
     color: "#5f6368",
     cursor: "pointer",
+
   },
 }));

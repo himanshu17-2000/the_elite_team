@@ -44,9 +44,9 @@ const Main = ({ classData }) => {
       <div className="main__wrapper">
         <div className="main__content">
           <div className="main__wrapper1">
-            <div className="main__bgImage">
+            {/* <div className="main__bgImage">
               <div className="main__emptyStyles" />
-            </div>
+            </div> */}
             <div className="main__text">
               <h1 className="main__heading main__overflow">
                 {classData.className}
@@ -62,10 +62,6 @@ const Main = ({ classData }) => {
           </div>
         </div>
         <div className="main__announce">
-          <div className="main__status">
-            <p>Upcoming</p>
-            <p className="main__subText">No work due</p>
-          </div>
           <div className="main__announcements">
             <div className="main__announcementsWrapper">
               <div className="main__ancContent">

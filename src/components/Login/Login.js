@@ -9,13 +9,6 @@ const Login = () => {
   console.log(loggedInUser);
   return (
     <div className="login">
-      <div className="field">
-        <label htmlFor="DoLiketoCode">Login as:</label>
-        <div className="in">
-          <input type="radio" className="type" name="status" value={true}/> Teacher
-          <input type="radio" className="type" name="status" value={false}/> Student
-        </div>
-      </div>
       <Button variant="contained" color="default" onClick={() => login()}>
         Login Now!
       </Button>
