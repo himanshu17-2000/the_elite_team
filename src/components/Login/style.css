@@ -1,13 +1,40 @@
+
 .login {
-  background-color: #0b7e43;
+  background-color: cyan;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  font-family: 'Acme', sans-serif;
 }
 
 .login__logo {
   object-fit: contain;
   height: 90vh;
+  font-family: 'Acme', sans-serif;
+}
+.field{
+  height: 10vh;
+  font-size: 25px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-family: 'Acme', sans-serif;
+}
+label{
+  font-size: 25px;
+  margin: 10px;
+  font-family: 'Acme', sans-serif;
+}
+.status{
+  margin: 10px;
+  padding: 10px;
+}
+/* .in{
+  margin: 20px;
+} */
+.type{
+padding: 20px;
+margin: 5px;
 }

@@ -92,3 +92,9 @@ ol {
 .joined__bottom > * {
   margin-right: 20px;
 }
+.outer_card{
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+  position: relative;
+}
