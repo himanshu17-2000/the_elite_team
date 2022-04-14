@@ -1,13 +1,8 @@
 import * as React from 'react';
-import Card from 'material-ui/Card';
-import CardActions from 'material-ui/Card/CardActions';
-import CardContent from 'material-ui/Card/CardContent';
-import CardMedia from 'material-ui/Card/CardMedia';
+
 import { Link } from 'react-router-dom';
 import "./style.css";
-import Button from 'material-ui/Button';
-import Typography from 'material-ui/Typography';
-
+import { Card ,CardActions , CardMedia,CardContent ,Typography , Button} from '@material-ui/core';
 const JoinedClasses = ({ classData }) => {
   return (
     <div className='outer_card'>
@@ -26,7 +21,7 @@ const JoinedClasses = ({ classData }) => {
           Lizards are a widespread group of squamate reptiles, with over 6,000
           species, ranging across all continents except Antarctica
         </Typography>
-        <div className="joined__content">
+        <div  className="joined__content" style={{color: "black"}}>
             <Link className="joined__title" to={`/${classData.id}`}>
               <h2>{classData.className}</h2>
             </Link>
