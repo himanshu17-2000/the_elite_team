@@ -2,15 +2,16 @@ import React, { useEffect, useState } from "react";
 import { Drawer, JoinedClasses, Login, Main } from "./components";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { IsUserRedirect, ProtectedRoute } from "./routes/Routes";
-import { Grid } from "@material-ui/core";
+import { Grid, TextField } from "@material-ui/core";
 import { useLocalContext } from "./context/context";
+
 import db from "./lib/firebase";
 function App() {
   const { loggedInMail } = useLocalContext();
 
   const [createdClasses, setCreatedClasses] = useState([]);
   const [joinedClasses, setJoinedClasses] = useState([]);
-
+  const [search, setsearch] = useState("");
   useEffect(() => {
     if (loggedInMail) {
       let unsubscribe = db
@@ -40,9 +41,12 @@ function App() {
   return (
     <Router>
       <Switch>
+
+
         {createdClasses.map((item, index) => (
           <Route key={index} exact path={`/${item.id}`}>
             <Drawer />
+
             <Main classData={item} />
           </Route>
         ))}
@@ -64,15 +68,34 @@ function App() {
         <ProtectedRoute user={loggedInMail} path="/" exact>
           <Drawer />
           <ol className="joined">
-          <Grid container spacing = {2}>
-            {createdClasses.map((item) => (
-              <Grid item lg={3} md={3} sm={12} xs={12} >
-                <JoinedClasses classData={item} />
-              </Grid>
+            <Grid container spacing={2}>
+              <Grid container spacing={1} direction="row"
+                alignItems="center"
+                justifyContent="center"  >
+                <Grid item lg={2} md={2} sm={12} xs={12} >
 
-            ))}
-             </Grid>
-            <Grid container spacing = {2}>
+                  <input  style={{
+                    padding :10 ,
+                    fontSize:18
+
+                  }}type="text" onChange={(e) => { setsearch(e.target.value) }} placeholder="Search By Subject name "  />
+                </Grid >
+              </Grid>
+              {createdClasses.filter((val)=>{
+                if(search === ""){
+                  return val;
+                }
+                else if(val.className.toLowerCase().includes(search.toLowerCase())){
+                          return val ;
+                }
+              }).map((item) => (
+                <Grid item lg={3} md={3} sm={12} xs={12} >
+                  <JoinedClasses classData={item} />
+                </Grid>
+
+              ))}
+            </Grid>
+            <Grid container spacing={2}>
               {joinedClasses.map((item) => (
                 <Grid item lg={3} md={3} sm={12} xs={12} >
                   <JoinedClasses classData={item} />
@@ -83,7 +106,7 @@ function App() {
           </ol>
         </ProtectedRoute>
       </Switch>
-    </Router>
+    </Router >
   );
 }
 
