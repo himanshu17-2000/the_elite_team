@@ -29,7 +29,7 @@ const Announcment = ({ classData }) => {
               <div>{item.sender}</div>
             </div>
             <p className="amt__txt">{item.text}</p>
-            <img className="amt__img" src={ 'https://cdn-icons.flaticon.com/png/512/4726/premium/4726010.png?token=exp=1649969743~hmac=745a313d2973826f69bd1634885b0735'} alt={item.text} />
+            <img className="amt__img" src={ 'https://png.pngtree.com/png-clipart/20191120/original/pngtree-outline-of-document-icon-isolated-png-image_5045584.jpg'} alt={item.text} />
             <br/>
             <br/>
             <Modal url= {item.imageUrl} />
